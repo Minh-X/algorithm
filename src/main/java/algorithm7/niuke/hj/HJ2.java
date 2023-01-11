@@ -1,6 +1,5 @@
 package algorithm7.niuke;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 /**

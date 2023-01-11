@@ -13,13 +13,13 @@ public class HJ6 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        if (scanner.hasNextLine()) {
+        if (scanner.hasNextInt()) {
             int n = scanner.nextInt();
             c3(n);
         }
     }
     // 优化超时
-    private static void c3(int num) {
+    static void c3(int num) {
         int k = (int) Math.sqrt(num);
         for (long i = 2; i <= k; ++i) {
             while (num % i == 0) {
