@@ -1,4 +1,4 @@
-package algorithm7.niuke;
+package algorithm7.niuke.hj;
 
 import java.util.Scanner;
 import java.util.TreeSet;
