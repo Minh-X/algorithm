@@ -1,0 +1,43 @@
+package algorithm_21.递归基础练习;
+
+import java.util.Scanner;
+
+/**
+ * 汉诺塔
+ * @author permission
+ * @Date 2021 - 07 - 11 - 21:15
+ * @package algorithm.递归基础练习
+ * @Description: 将 1-N 从A移动到B，C作为辅助空间
+ */
+public class 汉诺塔 {
+    int step =1;
+    /**
+     * 汉诺塔问题
+     * @param n 层数
+     * @param from 起点
+     * @param to 终点
+     * @param help 辅助空间
+     */
+    public void f1(int n, String from, String to, String help){
+        if (n == 1){
+            System.out.println(step + ": move " + n + " from " + from + " to " + to);
+            step++;
+            return;
+        }
+        f1(n-1, from, help, to);
+        System.out.println(step + ": move " + n + " from " + from + " to " + to);
+        step++;
+        f1(n-1, help, to, from);
+    }
+
+    public static void main(String[] args) {
+        汉诺塔 obj = new 汉诺塔();
+        String from = new String("A");
+        String to = new String("B");
+        String help = new String("C");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("输入汉诺塔的层数：");
+        int n = scanner.nextInt();
+        obj.f1(n,from,to,help);
+    }
+}
