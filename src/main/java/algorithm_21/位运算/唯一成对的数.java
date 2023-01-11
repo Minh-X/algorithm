@@ -1,7 +1,7 @@
 package algorithm_21.位运算;
 
-import algorithm.util.MyUtil;
 
+import algorithm_21.util.MyUtil;
 import java.util.Random;
 
 /**

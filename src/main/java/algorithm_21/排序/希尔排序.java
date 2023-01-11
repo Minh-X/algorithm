@@ -1,7 +1,8 @@
 package algorithm_21.排序;
 
-import algorithm.util.MyUtil;
 
+
+import algorithm_21.util.MyUtil;
 import java.util.Scanner;
 
 /**
