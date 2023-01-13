@@ -53,11 +53,10 @@ public class 冒泡排序 {
 
     public static void main(String[] args) {
         int[] a = new int[]{6, 3, 8, 2, 9, 1};
-
-        Arrays.stream(f2(a)).forEach(System.out::print);
+        Arrays.stream(a).forEach(System.out::print);
         System.out.println();
 
-        Arrays.stream(a).forEach(System.out::print);
+        Arrays.stream(f2(a)).forEach(System.out::print);
         System.out.println();
 
 
@@ -66,5 +65,28 @@ public class 冒泡排序 {
         while (iterator.hasNext()){
             System.out.print(iterator.nextInt());
         }
+
+        System.out.println();
+        Arrays.stream(f3(a)).forEach(System.out::print);
+        System.out.println();
+    }
+
+    private static int[] f3(int[] a) {
+        int[] arr = a.clone();
+        boolean flag = false;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j+1]) {
+                    arr[j] = arr[j] + arr[j+1];
+                    arr[j + 1] = arr[j] - arr[j+1];
+                    arr[j] = arr[j] - arr[j+1];
+                    flag = true;
+                }
+            }
+            if (!flag) {
+                break;
+            }
+        }
+        return arr;
     }
 }

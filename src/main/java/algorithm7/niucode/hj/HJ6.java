@@ -1,4 +1,4 @@
-package algorithm7.niuke.hj;
+package algorithm7.niucode.hj;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @Date: 2023/1/11 22:54
  * @Version: 1.0
  * @ClassName: HJ6
- * @Description: 质因子
+ * @Description: 质数因子
  */
 public class HJ6 {
 
@@ -15,9 +15,10 @@ public class HJ6 {
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNextInt()) {
             int n = scanner.nextInt();
-            c3(n);
+            c4(n);
         }
     }
+
     // 优化超时
     static void c3(int num) {
         int k = (int) Math.sqrt(num);
@@ -28,7 +29,7 @@ public class HJ6 {
             }
         }
         // 输出最后一个数 如：当n=2000000014，输出 1000000007
-        System.out.println(num == 1 ? "": num+" ");
+        System.out.println(num == 1 ? "" : num + " ");
     }
 
     // n大的话超时 如：n=2000000014
@@ -42,17 +43,28 @@ public class HJ6 {
     }
 
     // n大的话超时 如：n=2000000014
-    public static void c1(long num){
-        for (int i= 2;i <= num; i++){
-            if (num % i==0){
+    public static void c1(long num) {
+        for (int i = 2; i <= num; i++) {
+            if (num % i == 0) {
                 System.out.print(i + " ");
-                c1(num/i);
+                c1(num / i);
                 break;
             }
-            if (i==num){
-                System.out.print( i + "");
+            if (i == num) {
+                System.out.print(i + "");
             }
         }
+    }
+
+    private static void c4(int n) {
+        int k = (int) Math.sqrt(n);
+        for (int i = 2; i <= k; i++) {
+            while (n % i == 0) {
+                System.out.print(i + " ");
+                n = n / i;
+            }
+        }
+        System.out.println(n == 1 ? "" : n);
     }
 
 }

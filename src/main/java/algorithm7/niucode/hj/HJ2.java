@@ -1,4 +1,4 @@
-package algorithm7.niuke.hj;
+package algorithm7.niucode.hj;
 
 import java.util.Scanner;
 

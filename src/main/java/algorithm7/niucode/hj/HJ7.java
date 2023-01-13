@@ -1,4 +1,4 @@
-package algorithm7.niuke.hj;
+package algorithm7.niucode.hj;
 
 import java.util.Scanner;
 
@@ -15,12 +15,16 @@ public class HJ7 {
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNextDouble()) {
             double dou = scanner.nextDouble();
-            c1(dou);
+            c2(dou);
         }
     }
 
     private static void c1(double dou) {
         System.out.println(Math.round(dou));
+    }
+
+    private static void c2(double dou) {
+        System.out.println((int)(dou+0.5));
     }
 
 }

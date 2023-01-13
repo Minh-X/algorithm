@@ -11,8 +11,38 @@ import java.util.Arrays;
  */
 public class 插入排序 {
     public static void main(String[] args) {
-        int[] a = {5, 8, 3, 4, 9, 7, 1};
+        int[] a = {5, 8, 3, 4, 9, 7, 7, 1};
+        Arrays.stream(a).forEach(System.out::print);
+        System.out.println();
         Arrays.stream(f1(a)).forEach(System.out::print);
+        System.out.println();
+        Arrays.stream(f2(a)).forEach(System.out::print);
+        System.out.println();
+        Arrays.stream(f3(a)).forEach(System.out::print);
+    }
+
+    private static int[] f3(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i - 1; j > 0 && arr[j] > arr[j+1]; j--) {
+                arr[j] = arr[j] + arr[j - 1];
+                arr[j - 1] = arr[j] - arr[j - 1];
+                arr[j] = arr[j] - arr[j - 1];
+            }
+        }
+        return arr;
+    }
+
+    private static int[] f2(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int j = i;
+            while (j > 0 && arr[j] < arr[j - 1]) {
+                arr[j] = arr[j] + arr[j - 1];
+                arr[j - 1] = arr[j] - arr[j - 1];
+                arr[j] = arr[j] - arr[j - 1];
+                j--;
+            }
+        }
+        return arr;
     }
 
     private static int[] f1(int[] a) {
@@ -36,4 +66,6 @@ public class 插入排序 {
 
         return arr;
     }
+
+
 }

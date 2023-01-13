@@ -1,7 +1,5 @@
-package algorithm7.niuke.hj;
+package algorithm7.niucode.hj;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Scanner;
 
 /**

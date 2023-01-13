@@ -1,4 +1,4 @@
-package algorithm7.niuke.hj;
+package algorithm7.niucode.hj;
 
 import java.util.BitSet;
 import java.util.HashSet;
