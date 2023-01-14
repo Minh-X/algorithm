@@ -8,6 +8,8 @@ import java.util.Scanner;
  * @Version: 1.0
  * @ClassName: HJ6
  * @Description: 质数因子
+ *
+ *              （如180的质因子为2 2 3 3 5
  */
 public class HJ6 {
 
@@ -16,6 +18,8 @@ public class HJ6 {
         if (scanner.hasNextInt()) {
             int n = scanner.nextInt();
             c4(n);
+            System.out.println();
+            c5(n);
         }
     }
 
@@ -65,6 +69,18 @@ public class HJ6 {
             }
         }
         System.out.println(n == 1 ? "" : n);
+    }
+
+    private static void c5(int n) {
+        int k = (int) Math.sqrt(n);
+        for (int i = 2; i <= k; i++) {
+            while (n % i == 0) {
+                System.out.print(i + " ");
+                n = n / i;
+            }
+        }
+        //如果n最后不为1,是质因子 例如:7
+        System.out.print(n == 1 ? "" : n);
     }
 
 }
