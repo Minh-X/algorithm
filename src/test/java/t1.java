@@ -8,6 +8,7 @@
 public class t1 {
     public static void main(String[] args) {
         int[] a = {129,2,130,4,5};
+
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
         }
@@ -23,4 +24,6 @@ public class t1 {
         a[j] = a[i] - a[j];
         a[i] = a[i] - a[j];
     }
+
+
 }
