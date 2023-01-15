@@ -14,6 +14,9 @@ public class LC28 {
     }
 
     private int KMP(String haystack, String needle) {
+        if (haystack == null || needle == null || needle.length() < 1 || haystack.length() < needle.length()) {
+            return -1;
+        }
         char[] s1 = haystack.toCharArray();
         char[] s2 = needle.toCharArray();
 
