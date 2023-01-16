@@ -14,7 +14,7 @@ public class LC796 {
     }
 
     public static boolean rotateString(String s, String goal) {
-        if (s.length() != goal.length()) {
+        if (s.length() != goal.length() || s.length()==0) {
             return false;
         }
         return -1 == kmp(s + s, goal) ? false : true;
