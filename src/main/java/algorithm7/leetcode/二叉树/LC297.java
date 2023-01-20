@@ -96,8 +96,9 @@ public class LC297 {
 
         Queue<TreeNode> queue = new LinkedList<>();//存节点（bfs顺序）
         queue.add(root);//先将头节点放入queue
+        TreeNode head;
         while (!queue.isEmpty()) { //按顺序取出
-            TreeNode head = queue.poll();
+            head = queue.poll();
             if (head != null) {
                 resStr.add(String.valueOf(head.val));
                 if (head.left != null) {

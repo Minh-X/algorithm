@@ -18,4 +18,8 @@ public class TreeNode {
     public TreeNode left = null;
     public TreeNode right = null;
 
+    public TreeNode(int val) {
+        this.val = val;
+    }
+
 }
