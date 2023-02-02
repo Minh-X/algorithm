@@ -35,6 +35,43 @@ public class LC1143 {
     }
 
     /*
+        dp
+ */
+    private static int handle_dp(char[] charArray1, char[] charArray2) {
+        int N = charArray1.length;
+        int M = charArray2.length;
+        int[][] dp = new int[N][M];
+        dp[0][0] = charArray1[0] == charArray2[0] ? 1 : 0;
+        for (int j = 1; j < M; j++) {
+            if (charArray1[0] == charArray2[j]) {
+                dp[0][j] = 1;
+            } else {
+                dp[0][j] = dp[0][j - 1];
+            }
+        }
+        for (int i = 1; i < N; i++) {
+            if (charArray1[i] == charArray2[0]) {
+                dp[i][0] = 1;
+            } else {
+                dp[i][0] = dp[i - 1][0];
+            }
+        }
+        for (int i = 1; i < N; i++) {
+            for (int j = 1; j < M; j++) {
+                int p1 = dp[i - 1][j];
+                int p2 = dp[i][j - 1];
+                int p3 = 0;
+                if (charArray1[i] == charArray2[j]) {
+                    p3 = 1 + dp[i - 1][j - 1];
+                }
+                dp[i][j] = Math.max(p1, Math.max(p2, p3));
+            }
+        }
+
+        return dp[N - 1][M - 1];
+    }
+
+    /*
             暴力递归（超时）
      */
     //返回str1[0...i]位置和str2[0...j]位置的最长公共子序列长度

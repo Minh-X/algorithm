@@ -97,7 +97,7 @@ public class NC42 {
         for (int i = index; i < nums.size(); i++) {
             Collections.swap(nums, index, i);
             handle_recursion2(nums, index + 1, res);
-            Collections.swap(nums, index, i);
+            Collections.swap(nums, index, i);//恢复现场
         }
     }
 

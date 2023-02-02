@@ -13,7 +13,11 @@ import java.util.Stack;
  */
 public class NC52 {
 
-    public boolean isValid (String s) {
+    public static void main(String[] args) {
+        System.out.println(isValid("()())("));
+    }
+
+    public static boolean isValid (String s) {
         // write code here
         if (s.length() == 0 || s == null) {
             return false;
@@ -40,4 +44,5 @@ public class NC52 {
         }
         return false;
     }
+
 }

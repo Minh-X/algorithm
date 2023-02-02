@@ -11,7 +11,8 @@ public class Test {
     public void s() {
         String s = Integer.toString(3, 2);
         System.out.println(s);
-        System.out.println(Integer.parseInt(String.valueOf(5), 16));
+        System.out.println("------------");
+        System.out.println(Integer.parseInt("1111001011", 2));
         int a = 8;
 
         int c = 3|1;

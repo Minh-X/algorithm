@@ -1,4 +1,4 @@
-package algorithm_21.递归;
+package algorithm_21.递归基础练习;
 
 /**
  * 数组求和
