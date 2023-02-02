@@ -1,4 +1,4 @@
-package algorithm_21.递归基础练习;
+package algorithm_21.递归;
 
 /**
  * 打印 i 到 j

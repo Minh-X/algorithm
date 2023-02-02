@@ -1,4 +1,4 @@
-package algorithm_21.递归基础练习;
+package algorithm_21.递归;
 
 import java.util.Scanner;
 
@@ -18,6 +18,11 @@ public class 汉诺塔 {
      * @param to 终点
      * @param help 辅助空间
      */
+    /*
+            1. 第1 --- n-1层（最上面是第1层，最下面是第n层） 放到help
+            2. 第n层 放到目标位置B
+            3. 重复
+     */
     public void f1(int n, String from, String to, String help){
         if (n == 1){
             System.out.println(step + ": move " + n + " from " + from + " to " + to);
@@ -32,9 +37,9 @@ public class 汉诺塔 {
 
     public static void main(String[] args) {
         汉诺塔 obj = new 汉诺塔();
-        String from = new String("A");
-        String to = new String("B");
-        String help = new String("C");
+        String from = "A";
+        String to = "B";
+        String help = "C";
         Scanner scanner = new Scanner(System.in);
         System.out.print("输入汉诺塔的层数：");
         int n = scanner.nextInt();
