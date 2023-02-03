@@ -22,7 +22,7 @@ public class LC51 {
         List<List<String>> res = solveNQueens(n);
         for (List<String> r : res) {
             for (String s : r) {
-                System.out.print(s);
+                System.out.print(s+"   ");
             }
             System.out.println();
 //            }
@@ -35,12 +35,12 @@ public class LC51 {
     public static List<List<String>> solveNQueens(int n) {
         int[] record = new int[n];
         List<List<String>> res = new ArrayList<>();
-        List<String> s = new ArrayList<>();
+        ArrayList<String> s = new ArrayList<>();
         handle(0, n, record, res, s);
         return res;
     }
 
-    private static void handle(int i, int n, int[] record, List<List<String>> res, List<String> s) {
+    private static void handle(int i, int n, int[] record, List<List<String>> res, ArrayList<String> s) {
         if (i == n) {
             for (int j = 0; j < n; j++) {//一种解法，n层皇后摆放的位置
                 char[] row = new char[n];
@@ -48,7 +48,7 @@ public class LC51 {
                 row[record[j]] = 'Q';
                 s.add(new String(row));
             }
-            List<String> s1 = s.stream().collect(Collectors.toList());//复制一个新的list，res.add是将list地址放进去，不复制的话下面s.clear会将放进res的解法清空（add加入的是地址）
+            ArrayList<String> s1 = (ArrayList<String>) s.clone();//复制一个新的list，res.add是将list地址放进去，不复制的话下面s.clear会将放进res的解法清空（add加入的是地址）
             res.add(s1);//当前解法加到res
             s.clear();//清空当前解法
             return;
