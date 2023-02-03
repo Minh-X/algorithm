@@ -27,7 +27,8 @@ public class NC59 {
     }
 
     /*
-            dp
+            dp （可以先优化成两个一维数组，因为dp[i][j] = dp[i-1][j-1] + min(dp[i][j-1], dp[i-1][j])，每次只用上一行和这一行的前面部分（dp[0][j]和dp[i][0]可以直接得出）即可退出这一行的全部）
+                 再优化成一个一维数组
      */
     private static int handle_dp(int[][] matrix) {
         int row = matrix.length;
