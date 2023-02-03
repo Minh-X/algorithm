@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * @Author: permission
  * @Date: 2023/1/16 21:17
@@ -15,13 +17,14 @@ public class Test {
         System.out.println(Integer.parseInt("1111001011", 2));
         int a = 8;
 
-        int c = 3|1;
+        int c = 3 | 1;
         System.out.println(c);
     }
 
     @org.junit.Test
     public void t1() {
-
+        int[] ints = {9, 4, 1, 7};
     }
+
 
 }
