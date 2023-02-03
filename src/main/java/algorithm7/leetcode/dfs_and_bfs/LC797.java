@@ -1,4 +1,4 @@
-package algorithm7.leetcode.dfs;
+package algorithm7.leetcode.dfs_and_bfs;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
