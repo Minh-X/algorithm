@@ -24,6 +24,8 @@ public class Test {
     @org.junit.Test
     public void t1() {
         int[] ints = {9, 4, 1, 7};
+        String path = this.getClass().getResource("/").getPath();
+        System.out.println(path);
     }
 
 
