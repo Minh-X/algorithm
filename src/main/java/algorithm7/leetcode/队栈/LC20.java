@@ -1,6 +1,9 @@
-package algorithm7.leetcode.字符串;
+package algorithm7.leetcode.队栈;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Stack;
 
 /**
  * @Author: permission
@@ -16,6 +19,34 @@ public class LC20 {
         String s = scanner.nextLine();
         System.out.println(isValid(s));
     }
+
+    public static boolean isValid(String s) {
+//        return handle1(s);
+//        return handle2(s);
+        return handle3(s);
+    }
+
+    /*
+            再刷20230205
+     */
+    private static boolean handle3(String s) {
+        char[] chars = s.toCharArray();
+        Map<Character, Character> map = new HashMap<>();//题中一共三种扩号 () [] {}
+        map.put('(', ')');
+        map.put('[', ']');
+        map.put('{', '}');
+        Stack<Character> stack = new Stack<>();
+        for (char ch : chars) {
+//            if (!stack.isEmpty() && map.get(stack.peek()) != null && map.get(stack.peek()) == ch) {//这里注意要判断map.get(stack.peek()) != null，不然会空指针（右扩号没放进map）
+            if (!stack.isEmpty() && map.getOrDefault(stack.peek(), '0') == ch) {//这里注意要判断map.get(stack.peek()) != null，不然会空指针（右扩号没放进map）
+                stack.pop();
+            } else {
+                stack.push(ch);
+            }
+        }
+        return stack.isEmpty();
+    }
+
 
     /*
 
@@ -37,7 +68,7 @@ public class LC20 {
             输出：false
      */
 
-    public static boolean isValid(String s) {
+    public static boolean handle1(String s) {
         int len = s.length();
         // 括号数要成对
         if (len % 2 != 0) {
@@ -67,7 +98,10 @@ public class LC20 {
         return stack.isEmpty();
     }
 
-    public boolean isValid2(String s) {
+    /*
+            LC评论区（妙）
+     */
+    public static boolean handle2(String s) {
         while (s.contains("()") || s.contains("{}") || s.contains("[]")) {
             s = s.replace("()", "");
             s = s.replace("[]", "");
