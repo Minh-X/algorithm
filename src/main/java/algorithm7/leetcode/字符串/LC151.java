@@ -13,12 +13,18 @@ import java.util.List;
  */
 public class LC151 {
     public static void main(String[] args) {
-        reverseWords(null);
+        String s = "a good   example";
+        String res = reverseWords(s);
+        System.out.println(res);
     }
 
     public static String reverseWords(String s) {
+        return t1(s);
+    }
+
+    public static String t1(String s) {
         s = s.trim();
-        String[] splits = s.split("\\s+");
+        String[] splits = s.split("\\ +");
         StringBuilder sb = new StringBuilder();
         for (int i = splits.length - 1; i > 0.; i--) {
             sb.append(splits[i]).append(" ");
@@ -27,7 +33,7 @@ public class LC151 {
         return sb.toString();
     }
 
-    public static String reverseWords2(String s) {
+    public static String t2(String s) {
         s = s.trim();
         String[] splits = s.split("\\s+");
         List<String> list = Arrays.asList(splits);
