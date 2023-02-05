@@ -22,7 +22,7 @@ public class LC504 {
     }
 
     private static String handle1(int num) {
-        String res = "";
+        String res;
         res = Integer.toString(num, 7);
         return res;
     }
