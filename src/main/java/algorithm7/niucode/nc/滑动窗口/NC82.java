@@ -13,6 +13,14 @@ import java.util.LinkedList;
  */
 public class NC82 {
 
+    public static ArrayList<Integer> maxInWindows(int[] num, int size) {
+        if (num == null || size < 1 || num.length < size) {
+            return new ArrayList<>();
+        }
+//        return handle_voilence(num, size);
+        return handle_deque(num, size);
+    }
+
     /*
             双端队列
      */
@@ -74,13 +82,5 @@ public class NC82 {
         }
         System.out.println();
         System.out.println("---------------");
-    }
-
-    public static ArrayList<Integer> maxInWindows(int[] num, int size) {
-        if (num == null || size < 1 || num.length < size) {
-            return new ArrayList<>();
-        }
-//        return handle_voilence(num, size);
-        return handle_deque(num, size);
     }
 }
