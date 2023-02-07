@@ -19,7 +19,6 @@ public class LC1604_20230207 {
         for (String name : res) {
             System.out.println(name);
         }
-
     }
 
     public static List<String> alertNames(String[] keyName, String[] keyTime) {
@@ -51,6 +50,7 @@ public class LC1604_20230207 {
                 }
             }
         }
+        Collections.sort(res);
         return res;
     }
 }

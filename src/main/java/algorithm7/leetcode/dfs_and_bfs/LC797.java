@@ -30,7 +30,6 @@ public class LC797 {
         Deque<Integer> deque = new ArrayDeque<>();
         deque.offerLast(0);
         dfs(0, graph.length - 1, graph, res, deque);
-
         return res;
     }
 
