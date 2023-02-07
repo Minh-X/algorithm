@@ -32,6 +32,4 @@ public class LC494 {
         }
         return handle_recursion(nums, index + 1, rest - nums[index]) + handle_recursion(nums, index + 1, rest + nums[index]);
     }
-
-
 }
