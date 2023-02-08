@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @Date: 2023/2/7 16:30
  * @Version: 1.0
  * @ClassName: H3_87_上班之路
- * @Description: 计算是否能达到公司 /上班之路
+ * @Description: 计算是否能达到公司 /上班之路 200
  */
 public class H3_87_上班之路_计算是否能达到公司_上班之路 {
 
