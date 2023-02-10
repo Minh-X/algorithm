@@ -12,7 +12,11 @@ public class Test {
 
     @org.junit.Test
     public void s() {
-        String s = Integer.toString(3, 2);
+        System.out.println(Integer.parseInt("1010", 2));
+        System.out.println(Integer.parseInt("1100", 2));
+        System.out.println(Integer.parseInt("1010", 2));
+        System.out.println(Integer.parseInt("0110", 2));
+        String s = Integer.toString(9, 2);
         System.out.println(s);
         System.out.println("------------");
         System.out.println(Integer.parseInt("1111001011", 2));
@@ -24,6 +28,16 @@ public class Test {
 
     @org.junit.Test
     public void t1() {
+        int[][] dp = new int[100000][100000];
+        for (int i = 0; i < 100000; i++) {
+            for (int j = 1; j < 100000; j++) {
+                dp[i][j] = i;
+//                if ((i&j) > (i^j)) {
+//                    System.out.println(i + " " + j);
+//                }
+            }
+        }
+
         int[] ints = {9, 4, 1, 7};
         String path = this.getClass().getResource("/").getPath();
         System.out.println(path);
