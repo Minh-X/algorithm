@@ -1,4 +1,4 @@
-package algorithm7.leetcode.每日一题;
+package algorithm7.leetcode.每日一题.YEAR2023.MONTH2;
 
 import java.util.Arrays;
 
@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @ClassName: LC2335_20230211
  * @Description: 装满杯子需要的最短总时长
  */
-public class LC2335_20230211 {
+public class DAY20230211_LC2335 {
 
     public static void main(String[] args) {
         int[] amount = {5, 6, 7};

@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @ClassName: H14_200_2023Q1_二进制差异数
  * @Description: 200
  */
-public class H2023Q1_200_14_二进制差异数 {
+public class H14_二进制差异数 {
 
     public static void main(String[] args) {
 /*

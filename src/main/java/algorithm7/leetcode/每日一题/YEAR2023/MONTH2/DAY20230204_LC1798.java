@@ -1,4 +1,4 @@
-package algorithm7.leetcode.每日一题;
+package algorithm7.leetcode.每日一题.YEAR2023.MONTH2;
 
 import java.util.Arrays;
 import java.util.TreeSet;
@@ -10,7 +10,7 @@ import java.util.TreeSet;
  * @ClassName: LC1798
  * @Description: 1798. 你能构造出连续值的最大数目
  */
-public class LC1798_20230204 {
+public class DAY20230204_LC1798 {
 
     public static void main(String[] args) {
         int[] coins = {1, 1, 1, 4};

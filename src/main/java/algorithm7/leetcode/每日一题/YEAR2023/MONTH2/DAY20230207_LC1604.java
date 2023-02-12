@@ -1,4 +1,4 @@
-package algorithm7.leetcode.每日一题;
+package algorithm7.leetcode.每日一题.YEAR2023.MONTH2;
 
 import java.util.*;
 
@@ -9,7 +9,7 @@ import java.util.*;
  * @ClassName: LC1604_20230207
  * @Description: 警告一小时内使用相同员工卡大于等于三次的人
  */
-public class LC1604_20230207 {
+public class DAY20230207_LC1604 {
 
 
     public static void main(String[] args) {

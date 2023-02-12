@@ -1,4 +1,4 @@
-package algorithm7.leetcode.每日一题;
+package algorithm7.leetcode.每日一题.YEAR2023.MONTH2;
 
 /**
  * @Author: permission
@@ -7,7 +7,7 @@ package algorithm7.leetcode.每日一题;
  * @ClassName: LC79
  * @Description: 79. 单词搜索
  */
-public class LC79_20230212 {
+public class DAY20230212_LC79 {
 
     public static void main(String[] args) {
         char[][] board = {{'A', 'B', 'C', 'C'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};

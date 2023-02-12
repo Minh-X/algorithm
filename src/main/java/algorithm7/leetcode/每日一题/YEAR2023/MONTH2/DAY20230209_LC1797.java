@@ -1,4 +1,4 @@
-package algorithm7.leetcode.每日一题;
+package algorithm7.leetcode.每日一题.YEAR2023.MONTH2;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +10,7 @@ import java.util.Map;
  * @ClassName: LC1797_20230209
  * @Description: 1797. 设计一个验证系统
  */
-public class LC1797_20230209 {
+public class DAY20230209_LC1797 {
 
     public static void main(String[] args) {
         AuthenticationManager authenticationManager = new AuthenticationManager(1);

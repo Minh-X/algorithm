@@ -1,4 +1,4 @@
-package algorithm7.leetcode.每日一题;
+package algorithm7.leetcode.每日一题.YEAR2023.MONTH2;
 
 import algorithm7.leetcode.util.TreeNode;
 
@@ -9,7 +9,7 @@ import algorithm7.leetcode.util.TreeNode;
  * @ClassName: LC2331_20230206
  * @Description: 2331. 计算布尔二叉树的值
  */
-public class LC2331_20230206 {
+public class DAY20230206_LC2331 {
 
     public static void main(String[] args) {
 

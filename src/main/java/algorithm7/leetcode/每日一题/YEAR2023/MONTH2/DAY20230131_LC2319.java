@@ -1,4 +1,4 @@
-package algorithm7.leetcode.每日一题;
+package algorithm7.leetcode.每日一题.YEAR2023.MONTH2;
 
 /**
  * @Author: permission
@@ -7,7 +7,7 @@ package algorithm7.leetcode.每日一题;
  * @ClassName: LC2319_20230131
  * @Description: 2319. 判断矩阵是否是一个 X 矩阵
  */
-public class LC2319_20230131 {
+public class DAY20230131_LC2319 {
 
     /*
 

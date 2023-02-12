@@ -1,4 +1,4 @@
-package algorithm7.leetcode.每日一题;
+package algorithm7.leetcode.每日一题.YEAR2023.MONTH2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +11,7 @@ import java.util.List;
  * @ClassName: LC1233_20230208
  * @Description: 1233. 删除子文件夹
  */
-public class LC1233_20230208 {
+public class DAY20230208_LC1233 {
 
     public static void main(String[] args) {
         String[] folder = {"/c/d/e", "/a", "/a/b", "/c/d", "/c/f"};

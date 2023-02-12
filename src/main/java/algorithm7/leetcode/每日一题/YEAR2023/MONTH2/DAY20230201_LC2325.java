@@ -1,4 +1,4 @@
-package algorithm7.leetcode.每日一题;
+package algorithm7.leetcode.每日一题.YEAR2023.MONTH2;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +10,7 @@ import java.util.Map;
  * @ClassName: LC2325_20230201
  * @Description: 2325. 解密消息
  */
-public class LC2325_20230201 {
+public class DAY20230201_LC2325 {
 
     public static void main(String[] args) {
         System.out.println(decodeMessage("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv"));

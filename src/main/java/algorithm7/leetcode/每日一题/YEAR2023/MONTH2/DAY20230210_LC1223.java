@@ -1,4 +1,4 @@
-package algorithm7.leetcode.每日一题;
+package algorithm7.leetcode.每日一题.YEAR2023.MONTH2;
 
 /**
  * @Author: permission
@@ -7,14 +7,14 @@ package algorithm7.leetcode.每日一题;
  * @ClassName: LC1223
  * @Description: 1223. 掷骰子模拟 hard
  */
-public class LC1223_20230210 {
+public class DAY20230210_LC1223 {
     private static final long MOD = (long) 1e9+7;
     private static int[] rollMax;
     private static int[][][] cache;
 
 
     public static int dieSimulator(int n, int[] rollMax) {
-        LC1223_20230210.rollMax = rollMax;
+        DAY20230210_LC1223.rollMax = rollMax;
         int m = rollMax.length;
         cache = new int[n][m][15];
         for (int i = 0; i < n; i++)
