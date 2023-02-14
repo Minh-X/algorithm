@@ -25,13 +25,6 @@ public class H1_79_农场施肥_不爱施肥的小布 {
         for (int i = 0; i < m; i++) {
             field[i] = scanner.nextInt();
         }
-
-        System.out.println("m：" + m);
-        System.out.println("n：" + n);
-        for (int i : field) {
-            System.out.print(i + " ");
-        }
-
         long start = System.currentTimeMillis();
 
 //        for (int i = 0; i < Math.pow(10, 9); i++) {
@@ -45,6 +38,9 @@ public class H1_79_农场施肥_不爱施肥的小布 {
         System.out.println("有bug：" + res2);
     }
 
+    /*
+        超时，需要用二分
+     */
     private static int handle(int m, int n, int[] field) {
         double minK = 0.0;
         while (true) {
@@ -95,7 +91,7 @@ public class H1_79_农场施肥_不爱施肥的小布 {
         return result;
     }
 
-    //判断效能为k时，所需总天数
+    //计算效能为k时，所需总天数
     public static int cal(int k, int[] fields) {
         int days = 0;
         for (int i = 0; i < fields.length; i++) {

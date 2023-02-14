@@ -22,7 +22,6 @@ public class CodeCounter {
         BufferedReader br = null;
         String s = null;
 
-
         if (file.isDirectory()) {
             File[] files = file.listFiles();
             for (File f : files) {
