@@ -22,8 +22,8 @@ public class H21_最大数字 {
  */
 //        String s = new Scanner(System.in).nextLine();
         StringBuilder sb = new StringBuilder();
-        sb.append("99887766554433221100");
-        for (int i = 20; i < 100000; i++) {
+//        sb.append("99887766554433221100987654321");
+        for (int i = 0; i < 100000; i++) {
             sb.append(new Random().nextInt(10));
         }
         String s = sb.toString();
@@ -63,20 +63,27 @@ public class H21_最大数字 {
             } else {
                 continue;
             }
-            if (charList.size() > 2) {
+
                 for (int i = 0; i < curList.size(); i++) {
                     if (curList.size() > 2) {
                         int curIndex = curList.get(i);
-                        if (curIndex + 1 >= n || chars[curIndex] < chars[curIndex + 1]) {
+                        if (i >= 2) {//如果前面已经保留有两个，后面的直接删除
+                            chars[curIndex] = 'N';
+                            curList.remove(i);
+                            i--;
+                            continue;
+                        }
+                        if (curIndex + 1 >= n || chars[curIndex] < chars[curIndex + 1]) {//如果chars[curIndex]出现次数大于2，且chars[curIndex]小于chars[curIndex+1]
                             chars[curIndex] = 'N';
                             curList.remove(i);
                             i--;
                         }
+
                     } else {
                         break;
                     }
                 }
-            }
+
 
 
         }
