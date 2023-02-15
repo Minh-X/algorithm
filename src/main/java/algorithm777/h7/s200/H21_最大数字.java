@@ -20,34 +20,29 @@ public class H21_最大数字 {
 期望：5479504
 
  */
-//        String s = new Scanner(System.in).nextLine();
-        StringBuilder sb = new StringBuilder();
-//        sb.append("99887766554433221100987654321");
-        for (int i = 0; i < 100000; i++) {
-            sb.append(new Random().nextInt(10));
-        }
-        String s = sb.toString();
+        String s = new Scanner(System.in).nextLine();
+//        StringBuilder sb = new StringBuilder();
+//        for (int i = 0; i < 100000; i++) {
+//            sb.append(new Random().nextInt(10));
+//        }
+//        String s = sb.toString();
         long start = System.currentTimeMillis();
         String res = handle(s);
         String res2 = handle2(s);
         long end = System.currentTimeMillis();
+        System.out.println("输入：");
         System.out.println(s);
+        System.out.println("-----------------------------");
         System.out.println(res);
-        System.out.println(res.length());
-        System.out.println(res2);
+        System.out.println("结果长度：" + res.length());
         System.out.println("耗时：" + (end - start) + " ms");
+        System.out.println(res2);
     }
 
-    /*
-            有bug
-     */
     private static String handle(String s) {
         char[] chars = s.toCharArray();
         ArrayList<Character> charList = new ArrayList<>();
         int n = chars.length;
-//        for (int i = 0; i < n; i++) {
-//
-//        }
         HashMap<Character, List<Integer>> map = new HashMap<>();
         for (int i = 0; i < n; i++) {
             charList.add(chars[i]);
@@ -83,27 +78,7 @@ public class H21_最大数字 {
                         break;
                     }
                 }
-
-
-
         }
-
-//        for (int k = 0; k < n; k++) {
-//            List<Integer> list = map.get(chars[k]);
-//            int curSize = list.size();
-//            for (int i = 0; i < curSize; i++) {
-//                if (curSize > 2) {
-//                    int curIndex = list.get(i);
-//                    if (curIndex + 1 >= list.size() || chars[curIndex] <= chars[curIndex + 1]) {
-//                        chars[curIndex] = 'N';
-//                        curSize--;
-//                    }
-//                } else {
-//                    break;
-//                }
-//            }
-//        }
-
         StringBuilder sb = new StringBuilder();
         for (char ch : chars) {
             if (ch != 'N') {
