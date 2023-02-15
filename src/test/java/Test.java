@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
 
 /**
  * @Author: permission
@@ -12,7 +13,12 @@ public class Test {
 
     @org.junit.Test
     public void tt() {
-
+        HashMap<Integer,Integer> map = new HashMap<>();
+        map.put(0, 0);
+        map.put(1, 1);
+        map.put(2, 2);
+        map.remove(1);
+        System.out.println(1);
     }
 
 
