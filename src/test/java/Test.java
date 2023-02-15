@@ -11,6 +11,12 @@ import java.util.Comparator;
 public class Test {
 
     @org.junit.Test
+    public void tt() {
+
+    }
+
+
+    @org.junit.Test
     public void s() {
         System.out.println(Integer.parseInt("1010", 2));
         System.out.println(Integer.parseInt("1100", 2));
