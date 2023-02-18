@@ -20,9 +20,6 @@ Life is painting a  picture, not doing 'a  sum'
 期望输出：
 Life is painting a picture, not doing 'a  sum'
 [8 15][19 25][44 46][48, 49]
-
-
-
  */
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
