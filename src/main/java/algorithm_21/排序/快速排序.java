@@ -23,7 +23,9 @@ public class 快速排序 {
     }
 
     private static void q7(int[] res, int start, int end) {
-        if (start > end) {return;}
+        if (start > end) {
+            return;
+        }
         int i, j, base;
         i = start;
         j = end;

@@ -1,6 +1,9 @@
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: permission
@@ -11,7 +14,55 @@ import java.util.HashMap;
  */
 public class Test {
 
-    @org.junit.Test
+    @org.junit.jupiter.api.Test
+    public void ccc() {
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(3, 3, 1, TimeUnit.MICROSECONDS, new LinkedBlockingQueue<>(), new ThreadPoolExecutor.AbortPolicy());
+        executor.allowCoreThreadTimeOut(true);
+        executor.submit(() -> System.out.println(Thread.currentThread().getName()));
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        executor.submit(() -> System.out.println(Thread.currentThread().getName()));
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        executor.submit(() -> System.out.println(Thread.currentThread().getName()));
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        executor.submit(() -> System.out.println(Thread.currentThread().getName()));
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(executor.getTaskCount());
+
+    }
+
+
+    @org.junit.jupiter.api.Test
+    public void tasd() {
+
+        HashMap<Integer,Byte[]> map = new HashMap<>();
+        int i = 0;
+        while (true) {
+            System.out.println(++i);
+            Byte[] bytes = new Byte[10240];
+            bytes[1] = 's';
+            map.put(0, bytes);
+        }
+
+    }
+
+
+    @org.junit.jupiter.api.Test
     public void tt() {
         HashMap<Integer,Integer> map = new HashMap<>();
         map.put(0, 0);
@@ -22,7 +73,7 @@ public class Test {
     }
 
 
-    @org.junit.Test
+    @org.junit.jupiter.api.Test
     public void s() {
         System.out.println(Integer.parseInt("1010", 2));
         System.out.println(Integer.parseInt("1100", 2));
@@ -38,7 +89,7 @@ public class Test {
         System.out.println(c);
     }
 
-    @org.junit.Test
+    @org.junit.jupiter.api.Test
     public void t1() {
         int[][] dp = new int[100000][100000];
         for (int i = 0; i < 100000; i++) {
@@ -55,7 +106,7 @@ public class Test {
         System.out.println(path);
     }
 
-    @org.junit.Test
+    @org.junit.jupiter.api.Test
     public void t2() {
         int[][] arr = new int [7][3];
 
