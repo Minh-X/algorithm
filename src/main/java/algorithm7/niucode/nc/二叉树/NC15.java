@@ -1,7 +1,6 @@
 package algorithm7.niucode.nc.二叉树;
 
 import algorithm7.niucode.base.util.TreeNode;
-import sun.reflect.generics.tree.Tree;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -39,7 +38,9 @@ public class NC15 {
         ArrayList<ArrayList<Integer> > res = new ArrayList();
         if(root == null)
             //如果是空，则直接返回空数组
+        {
             return res;
+        }
         //队列存储，进行层次遍历
         Queue<TreeNode> q = new ArrayDeque<TreeNode>();
         q.add(root);
@@ -52,10 +53,12 @@ public class NC15 {
                 TreeNode cur = q.poll();
                 row.add(cur.val);
                 //若是左右孩子存在，则存入左右孩子作为下一个层次
-                if(cur.left != null)
+                if(cur.left != null) {
                     q.add(cur.left);
-                if(cur.right != null)
+                }
+                if(cur.right != null) {
                     q.add(cur.right);
+                }
             }
             //每一层加入输出
             res.add(row);

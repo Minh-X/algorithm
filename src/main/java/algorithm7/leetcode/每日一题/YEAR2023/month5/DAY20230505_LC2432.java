@@ -48,9 +48,12 @@ public class DAY20230505_LC2432 {
         [[36,3],[1,5],[12,8],[25,9],[53,11],[29,12],[52,14]]
         期望 12
          */
-
+        long start = System.nanoTime();
         int[][] logs = {{0, 3}, {2, 5}, {0, 9}, {1, 15}};
         int res = hardestWorker(10, logs);
         System.out.println("res = " + res);
+        long end = System.nanoTime();
+        System.out.println("耗时(ns): " + (end - start));
+
     }
 }

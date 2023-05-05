@@ -1,7 +1,6 @@
 package algorithm7.niucode.nc.链表;
 
 import algorithm7.niucode.util.ListNode;
-import com.sun.scenario.effect.Merge;
 
 /**
  * @Author: permission
