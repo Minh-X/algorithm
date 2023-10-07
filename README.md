@@ -5,7 +5,7 @@
 
 #### 结构
 1. leetcode 刷题记录
-    algorithm/src/main/java/algorithm7/leetcode
+    src/main/java/algorithm7/leetcode
 
 2. 牛客记录
     algorithm/src/main/java/algorithm7/niucode
